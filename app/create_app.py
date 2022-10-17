@@ -56,8 +56,9 @@ def calling_app():
     #to set WebHook
     @app.route("/webhook",methods=["POST",'GET'])
     def webhook():
-        url_https = str(request.url_root)
-        print(url_https)
+        url_https = str(request.url_root).replace('http','https')
+        #if https use this one 
+        # url_https = str(request.url_root) 
         bot.remove_webhook()
         bot.set_webhook(url=url_https)
         return url_https
