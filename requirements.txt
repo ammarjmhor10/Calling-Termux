@@ -1,2 +1,4 @@
-flask
+Flask
+pyTelegramBotAPI
 gunicorn
+python-dotenv

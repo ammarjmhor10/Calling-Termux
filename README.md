@@ -1,23 +1,23 @@
 Connecting Flask and Gunicorn to Nginx with docker-compose
 ==========================================================
 
-Quick tutorial on how to serve requests to Flask through Nginx.
+Quick tutorial on how to serve requests to Flask through Gunicorn Termux Android.
 
-This code is explained in detail in my YouTube video: https://www.youtube.com/watch?v=Vkqz2hK4fKg&t=1s
 
-![overview](graphic.png)
+
 
 Setup
 =====
 
-Install docker and docker-compose
+- Install Termux,Python,git 
+- git clone 
+- allow  termux allow access to phone 
+-
 
-- https://docs.docker.com/get-docker/
-- https://docs.docker.com/compose/install/
 
 Usage
 =====
 
 ```
-docker-compose up
+gunicorn --bind 0.0.0.0:8000 --workers 4 "app.create_app:create_app()"
 ```
