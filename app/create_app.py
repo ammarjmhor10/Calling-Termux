@@ -39,7 +39,7 @@ def call(message):
     number = message.text[str(message.text).index('0'):]
     bot.send_message(message.chat.id,'number to call is: \n'+number)
     init_call = subprocess.call(f'termux-telephony-call '+number,shell=True)
-    bot.send_message(message.chat.id,'number to call is: ')
+    bot.send_message(message.chat.id,'is Calling ..' )
 
 @app.route('/', methods=['POST'])
 def getMessage():
